@@ -8,6 +8,12 @@
 			"style": {
 				"navigationStyle": "custom" //default是默认uniapp原生的顶部导航栏
 			}
+		},
+		{
+			"path": "pages/person/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
@@ -18,9 +24,9 @@
 	},
 	"tabBar": {
 		"list": [{
-			"pagePath": "/pages/index/index"
+			"pagePath": "pages/index/index"
 		}, {
-			"pagePath": "/pages/person/index"
+			"pagePath": "pages/person/index"
 		}]
 	}
 }

@@ -14,7 +14,7 @@
 		<found-word v-show="currentIndex === 1"></found-word>
 
 		<!-- 底部导航栏 -->
-		<u-tabbar v-model="current" :list="$store.state.tabList" :mid-button="true"></u-tabbar>
+		<u-tabbar :list="$store.state.tabList" :mid-button="true" @change="changeNav"></u-tabbar>
 	</view>
 </template>
 
@@ -31,7 +31,6 @@
 					fontSize: "40rpx"
 				},
 				currentIndex: 1,
-				current: 0,
 				tabs: [{
 					id: 1,
 					name: '关注'
@@ -45,12 +44,15 @@
 			FoundWord,
 			FoucsPerson
 		},
-		mounted() {
-		},
+		mounted() {},
 		methods: {
 			// 切换tab
 			changeTab(index) {
 				this.currentIndex = index;
+			},
+			// 切换底部导航
+			changeNav(index) {
+				console.log(index);
 			}
 		}
 	};
